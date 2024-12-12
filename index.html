@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Grade Finder</h1>
+        <form id="gradeForm">
+            <div class="input-group">
+                <label for="gradeMechanism">Grade Mechanism:</label>
+                <select id="gradeMechanism">
+                    <option value="percentage">Percentage</option>
+                    <option value="cgpa">CGPA</option>
+                </select>
+            </div>
+            <div id="inputFields">
+                <div class="input-group">
+                    <label>Subject:</label>
+                    <input type="text" name="subject" required>
+                    <label>Max Marks:</label>
+                    <input type="number" name="maxMarks" class="maxMarks" required>
+                    <label>Obtained Marks:</label>
+                    <input type="number" name="obtainedMarks" class="obtainedMarks" required>
+                    <button type="button" class="remove-btn" onclick="removeField(this)">Remove</button>
+                </div>
+            </div>
+            
+            <button type="button" id="button">Add Another</button>
+            <button type="submit">Calculate Grade</button>
+        </form>
+        <div id="result">Your result is: </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
