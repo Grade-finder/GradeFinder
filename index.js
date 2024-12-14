@@ -44,6 +44,14 @@ function calculateGrade() {
         const mm = Number(len[i].getElementsByClassName('maxMarks')[0].value);
         const om = Number(len[i].getElementsByClassName('obtainedMarks')[0].value);
         console.log(`om: ${om}, mm: ${mm}`)
+        if(om>mm){
+            alert('Add valid Max Marks value')
+            return;
+        }
+        if(om<0 || mm<0){
+            alert('Add valid values of marks')
+            return;
+        }
 
         maxMarks += mm;
         obtainedMarks += om;
