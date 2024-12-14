@@ -48,7 +48,7 @@ function calculateGrade() {
             alert('Add valid Max Marks value')
             return;
         }
-        if(om<0 || mm<0){
+        if(om<0 || mm<=0){
             alert('Add valid values of marks')
             return;
         }
