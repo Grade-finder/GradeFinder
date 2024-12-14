@@ -4,11 +4,26 @@ document.getElementById("gradeForm").addEventListener("submit", function (event)
 });
 
 function addField() {
+    const inputFields = document.getElementById("inputFields");
+    const inputGroups = inputFields.getElementsByClassName("input-group");
+
+    if (inputGroups.length > 0) {
+        const lastGroup = inputGroups[inputGroups.length - 1];
+        const subject = lastGroup.querySelector("input[name='subject']").value.trim();
+        const maxMarks = lastGroup.querySelector("input[name='maxMarks']").value.trim();
+        const obtainedMarks = lastGroup.querySelector("input[name='obtainedMarks']").value.trim();
+
+        if (subject === "" || maxMarks === "" || obtainedMarks === "") {
+            alert("Please fill out all fields in the current group before adding a new one.");
+            return;
+        }
+    }
+
     const inputGroup = document.createElement("div");
     inputGroup.className = "input-group";
     inputGroup.innerHTML = `
        <label>Subject:</label>
-                    <input type="text" name="subject" required>
+                    <input type="text" id="subject" name="subject" required>
                     <label>Max Marks:</label>
                     <input id='mm' type="number" name="maxMarks" class="maxMarks" required>
                     <label>Obtained Marks:</label>
@@ -57,7 +72,6 @@ function calculateGrade() {
         obtainedMarks += om;
         console.log(`ObtSum: ${obtainedMarks}, MaxSum: ${maxMarks}`)
     }
-    // console.log("om ",obtainedMarks," ","mm ",maxMarks);
     
     percentAge=(obtainedMarks/maxMarks) * 100;
     percentAge=percentAge.toFixed(2);
