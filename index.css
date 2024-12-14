@@ -1,22 +1,24 @@
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f2f5;
-    margin: 0;
-    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #0a0a23; /* Dark background */
+    color: white; /* White text */
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+
+    max-width: 400px;
+    margin: 100px   ;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #C8DFCB;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
     text-align: center;
 }
 
-h1 {
+#gradetitle {
     color: #343a40;
     font-size: 2.5em;
     margin-bottom: 20px;
@@ -61,6 +63,7 @@ input:focus, select:focus {
 }
 
 button {
+    font-family: 'Roboto Mono', monospace;
     padding: 12px 20px;
     margin: 10px 5px;
     border: none;
@@ -90,3 +93,40 @@ button:hover {
     font-size: 1.2em;
     color: #495057;
 }
+
+
+/* Import the Google font for the monospace look */
+
+
+.aboutus {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.title {
+    margin-top: 104px;
+    font-size: 3em;
+    font-weight: 700; /* Bold text */
+    letter-spacing: 5px;
+   
+    margin-bottom: 15px;
+}
+
+.description {
+   
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27.5px;
+
+   
+   
+}
+
+
+
+
+

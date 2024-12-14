@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Finder</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="faq.css">
 </head>
 <body>
+    <div class="aboutus">
+        <h1 class="title">student grade calculator</h1>
+        <p class="description">
+            looking for a grade calculator to calculate your study grades?
+            <br>Our simple to use grade calculator allows you to calculate
+            weighted grade calculation for CGPA and percent grades, and also
+            helps you figure out what you need to get in your finals to get
+            your desired grade.
+        </p>
+    </div>
+    
+
+
+
     <div class="container">
-        <h1>Grade Finder</h1>
+        <h1 id="gradetitle">Grade Finder</h1>
         <form id="gradeForm">
             <div class="mechanism">
                 <label for="gradeMechanism">Grade Mechanism:</label>
@@ -21,19 +36,60 @@
                 <div class="input-group">
                     <label>Subject:</label>
                     <input type="text" name="subject" required>
+    
                     <label>Max Marks:</label>
-                    <input id='mm' type="number" name="maxMarks" class="maxMarks" required>
+                    <input id="mm" type="number" name="maxMarks" class="maxMarks" required>
+    
                     <label>Obtained Marks:</label>
-                    <input id='om' type="number" name="obtainedMarks" class="obtainedMarks" required>
+                    <input id="om" type="number" name="obtainedMarks" class="obtainedMarks" required>
+    
                     <button type="button" class="remove-btn" onclick="removeField(this)">Remove</button>
                 </div>
             </div>
-            
+    
             <button type="button" id="button">Add Another</button>
             <button type="submit">Calculate Grade</button>
         </form>
-        <div id="result"></div>
     </div>
+    
+    <div id="result"></div>
+    
+    <div class="faq-container">
+        <div class="faq-title">Faq</div>
+        <div class="faq-section">
+          <div class="faq-column">
+            <h3>How to calculate your test score</h3>
+            <p>1. Calculate the percentage:</p>
+            <p>The percentage score is calculated by dividing the number of correct answers by the total number of questions, then multiplying by 100.</p>
+            <p>2. Convert percentage to CGPA:</p>
+            <p>After calculating the percentage, convert it to CGPA using the following scale:</p>
+            <ul>
+              <li>Percentage 90% and above = CGPA 10</li>
+              <li>Percentage 80% - 89.99% = CGPA 9</li>
+              <li>Percentage 70% - 79.99% = CGPA 8</li>
+              <li>Percentage 60% - 69.99% = CGPA 7</li>
+              <li>Percentage 50% - 59.99% = CGPA 6</li>
+              <li>Percentage 40% - 49.99% = CGPA 5</li>
+              <li>Below 40% = CGPA 4</li>
+            </ul>
+            <p>This gives you both your percentage and CGPA based on your test performance.</p>
+          </div>
+          <div class="faq-column">
+            <h3>How do I calculate my test grade?</h3>
+            <p>a. Determine the total points and points earned.</p>
+            <p>b. Divide points earned by total points and multiply by 100 for the percentage.</p>
+            <h3>Is 27 out of 40 a passing grade?</h3>
+            <p>It depends on the grading scale. For a passing score of 60%, 27 out of 40 equals 67.5%, which is a passing grade. Check with your teacher for their specific scale.</p>
+            <h3>What grade is 7 wrong out of 40?</h3>
+            <p>7 wrong out of 40 equals 82.5%. Grading scales may vary, so confirm with your teacher.</p>
+            <h3>Is 75 out of 80 an A?</h3>
+            <p>Yes, 75 out of 80 is an A, which is 93.75% in the default grading scale.</p>
+          </div>
+        </div>
+      </div>
+    
+
+
     <script src="index.js"></script>
 </body>
 </html>
