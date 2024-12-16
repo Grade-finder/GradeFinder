@@ -7,11 +7,14 @@ body {
     height: 100vh;
 }
 
+/* Calculator */
 .container {
 
     max-width: 400px;
-    margin: 100px   ;
+    margin: 90px   ;
     padding: 20px;
+    padding-left: 50px;
+    padding-left: 50px;
     background-color: #C8DFCB;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
@@ -95,7 +98,7 @@ button:hover {
 }
 
 
-/* Import the Google font for the monospace look */
+/* Title */
 
 
 .aboutus {
@@ -107,7 +110,7 @@ button:hover {
 }
 
 .title {
-    margin-top: 104px;
+    margin-top: 45px;
     font-size: 3em;
     font-weight: 700; /* Bold text */
     letter-spacing: 5px;
