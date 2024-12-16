@@ -13,7 +13,7 @@ function addField() {
         const maxMarks = lastGroup.querySelector("input[name='maxMarks']").value.trim();
         const obtainedMarks = lastGroup.querySelector("input[name='obtainedMarks']").value.trim();
 
-        if (subject === "" || maxMarks === "" || obtainedMarks === "" || maxMarks<=0 || obtainedMarks<0) {
+        if (subject === "" || maxMarks === "" || obtainedMarks === "" || Number(maxMarks)<=0 || Number(obtainedMarks)<0 || Number(obtainedMarks)>Number(maxMarks)) {
             alert("Please fill out all fields in the current group before adding a new one.");
             return;
         }
