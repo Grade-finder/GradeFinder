@@ -42,6 +42,9 @@
     
                     <label>Obtained Marks:</label>
                     <input id="om" type="number" name="obtainedMarks" class="obtainedMarks" min="0" max="999" required>
+
+                    <label>Reset</label>
+                    <input id="rs" type="reset" name="reset" class="resetbtn" >
     
                     <button type="button" class="remove-btn" onclick="removeField(this)">Remove</button>
                 </div>
@@ -49,6 +52,7 @@
     
             <button type="button" id="button">Add Another</button>
             <button type="submit">Calculate Grade</button>
+            <button type="reset" id="rst">Reset</button>
              <div id="result"></div>
         </form>
     </div>
