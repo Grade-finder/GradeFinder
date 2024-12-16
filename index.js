@@ -93,10 +93,10 @@ function calculateGrade() {
     console.log(val)
 
     if(val==='percentage'){
-        document.getElementById('result').textContent=`Your percentage is ${percentAge}`
+        alert(document.getElementById('result').textContent=`Your percentage is ${percentAge}`)
     }
     else{
-        document.getElementById('result').textContent=`Your CGPA is ${cgpa}`
+        alert(document.getElementById('result').textContent=`Your CGPA is ${cgpa}`)
     }
     
 }
