@@ -13,7 +13,7 @@ function addField() {
         const maxMarks = lastGroup.querySelector("input[name='maxMarks']").value.trim();
         const obtainedMarks = lastGroup.querySelector("input[name='obtainedMarks']").value.trim();
 
-        if (subject === "" || maxMarks === "" || obtainedMarks === "" || Number(maxMarks)<=0 || Number(obtainedMarks)<0 || Number(obtainedMarks)>Number(maxMarks)) {
+        if (subject === "" || maxMarks === "" || obtainedMarks === "" || Number(maxMarks)<=0 || Number(obtainedMarks)<0 || Number(obtainedMarks)>Number(maxMarks) || Number(obtainedMarks)>999 ||Number(maxMarks)>999) {
             alert("Please fill out all fields in the current group before adding a new one.");
             return;
         }
@@ -23,11 +23,11 @@ function addField() {
     inputGroup.className = "input-group";
     inputGroup.innerHTML = `
        <label>Subject:</label>
-                    <input type="text" id="subject" name="subject" required>
+                    <input type="text" id="subject" name="subject" minlength="1" maxlength="30" required>
                     <label>Max Marks:</label>
-                    <input id='mm' type="number" name="maxMarks" class="maxMarks" required>
+                    <input id='mm' type="number" name="maxMarks" class="maxMarks" min="1" max="999" required>
                     <label>Obtained Marks:</label>
-                    <input id='om' type="number" name="obtainedMarks" class="obtainedMarks" required>
+                    <input id='om' type="number" name="obtainedMarks" class="obtainedMarks" min="0" max="999" required>
                     <button type="button" class="remove-btn" onclick="removeField(this)">Remove</button>
     `;
     document.getElementById("inputFields").appendChild(inputGroup);
