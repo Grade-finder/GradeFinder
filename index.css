@@ -51,14 +51,14 @@ label {
 
 input, select {
     padding: 10px;
-    border: 2px solid #ced4da;
+    border: 2px solid #020c16;
     border-radius: 8px;
     margin-bottom: 10px;
     width: 80%;
     max-width: 400px;
     font-size: 1em;
     background-color: #e9ecef;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.2s ease;
 }
 
 input:focus, select:focus {
