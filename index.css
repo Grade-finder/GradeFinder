@@ -51,15 +51,14 @@ label {
 
 input, select {
     padding: 10px;
-    border: 2px solid #020c16;
+    border: 2px solid #ced4da;
     border-radius: 8px;
     margin-bottom: 10px;
-    outline: none;
     width: 80%;
     max-width: 400px;
     font-size: 1em;
     background-color: #e9ecef;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.3s ease;
 }
 
 input:focus, select:focus {
@@ -125,64 +124,10 @@ button:hover {
     font-size: 18px;
     font-weight: 500;
     line-height: 27.5px;
+
+   
+   
 }
-
-
-
-
-
-
-
-/* Styling for the new desired grade input form */
-.desired-grade-container {
-    background-color: #C8DFCB;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    margin-top: 30px;
-    text-align: center;
-}
-
-.desired-grade-container h2 {
-    color: #343a40;
-    margin-bottom: 20px;
-}
-
-.desired-grade-container .input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-#marksRequired {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #495057;
-}
-
-#marksRequired p {
-    font-size: 1.1em;
-    margin: 5px 0;
-}
-
-button {
-    font-family: 'Roboto Mono', monospace;
-    padding: 12px 20px;
-    margin: 10px 5px;
-    border: none;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
 
 
 

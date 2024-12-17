@@ -35,13 +35,13 @@
             <div id="inputFields">
                 <div class="input-group">
                     <label>Subject:</label>
-                    <input type="text" id="subject" name="subject"  minlength="1" maxlength="30"  required>
+                    <input type="text" id="subject" name="subject" required>
     
                     <label>Max Marks:</label>
-                    <input id="mm" type="number" name="maxMarks" class="maxMarks" min="1" max="999" required>
+                    <input id="mm" type="number" name="maxMarks" class="maxMarks" required>
     
                     <label>Obtained Marks:</label>
-                    <input id="om" type="number" name="obtainedMarks" class="obtainedMarks" min="0" max="999" required>
+                    <input id="om" type="number" name="obtainedMarks" class="obtainedMarks" required>
     
                     <button type="button" class="remove-btn" onclick="removeField(this)">Remove</button>
                 </div>
@@ -49,49 +49,18 @@
     
             <button type="button" id="button">Add Another</button>
             <button type="submit">Calculate Grade</button>
-            <button type="reset" id="rst">Reset</button>
-            <div id="result"></div>
+             <div id="result"></div>
         </form>
     </div>
-
-
-
-<!-- adding the desired grade option  -->
-<div class="desired-grade-container">
-    <h2>Calculate Required Marks</h2>
-    <form id="desiredGradeForm">
-        <div class="input-group">
-            <label for="desiredGrade">Desired Grade:</label>
-            <select id="desiredGrade" name="desiredGrade">
-                <option value="percentage">Percentage</option>
-                <option value="cgpa">CGPA</option>
-            </select>
-        </div>
-
-        <div class="input-group">
-            <label for="targetGrade">Enter Desired Percentage/CGPA:</label>
-            <input type="number" id="targetGrade" name="targetGrade" min="0" max="100" required>
-        </div>
-
-        <div class="input-group">
-            <label for="subjectCount">Number of Subjects:</label>
-            <input type="number" id="subjectCount" name="subjectCount" min="1" max="10" required>
-        </div>
-
-        <div id="marksRequired"></div>
-
-        <button type="submit">Calculate Required Marks</button>
-    </form>
-</div>
     
    
     
     <div class="faq-container">
-        <div class="faq-title">Faq</div>
+        <div class="faq-title">FAQ</div>
         <div class="faq-section">
           <div class="faq-column">
-            <h3>How to calculate your test score</h3>
-            <p>1. Calculate the percentage:</p>
+            <button class="questions"><h3>How to calculate your test score</h3></button>
+            <div class="panel"><p>1. Calculate the percentage:</p>
             <p>The percentage score is calculated by dividing the number of correct answers by the total number of questions, then multiplying by 100.</p>
             <p>2. Convert percentage to CGPA:</p>
             <p>After calculating the percentage, convert it to CGPA using the following scale:</p>
@@ -106,16 +75,21 @@
             </ul>
             <p>This gives you both your percentage and CGPA based on your test performance.</p>
           </div>
+</div>
+
           <div class="faq-column">
-            <h3>How do I calculate my test grade?</h3>
-            <p>a. Determine the total points and points earned.</p>
+            <button class="questions"><h3>How do I calculate my test grade?</h3></button>
+           <div class="panel"> <p>a. Determine the total points and points earned.</p>
             <p>b. Divide points earned by total points and multiply by 100 for the percentage.</p>
-            <h3>Is 27 out of 40 a passing grade?</h3>
-            <p>It depends on the grading scale. For a passing score of 60%, 27 out of 40 equals 67.5%, which is a passing grade. Check with your teacher for their specific scale.</p>
-            <h3>What grade is 7 wrong out of 40?</h3>
-            <p>7 wrong out of 40 equals 82.5%. Grading scales may vary, so confirm with your teacher.</p>
-            <h3>Is 75 out of 80 an A?</h3>
-            <p>Yes, 75 out of 80 is an A, which is 93.75% in the default grading scale.</p>
+          </div>
+
+            <button class="questions"><h3>Is 27 out of 40 a passing grade?</h3></button>
+            <div class="panel"><p>It depends on the grading scale. For a passing score of 60%, 27 out of 40 equals 67.5%, which is a passing grade. Check with your teacher for their specific scale.</p></div>
+            
+            <button class="questions"><h3>What grade is 7 wrong out of 40?</h3></button>
+            <div class="panel"><p>7 wrong out of 40 equals 82.5%. Grading scales may vary, so confirm with your teacher.</p></div>
+            <button class="questions"><h3>Is 75 out of 80 an A?</h3></button>
+            <div class="panel"> <p>Yes, 75 out of 80 is an A, which is 93.75% in the default grading scale.</p></div>
           </div>
         </div>
       </div>
@@ -123,7 +97,5 @@
 
 
     <script src="index.js"></script>
-    <script src="desiredGrade.js"></script> <!-- New script for the desired grade calculation -->
-
 </body>
 </html>

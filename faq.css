@@ -1,5 +1,5 @@
 .faq-container {
-    background-color:#8AC9FE80;
+    background-color:rgba(139, 202, 254, 0.502);
     border-radius: 20px;
     padding-left: 22px;
     padding-right: 22px;
@@ -58,3 +58,24 @@
       width: 100%;
     }
   }
+
+/* css for acordion */
+  .questions {
+    background-color: rgba(75, 108, 135, 0.502);
+    color: #f8f8f8;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition:0.4s;
+  }
+
+.panel {
+  color:white;
+    padding: 0 15px;
+    display: none;
+    background-color: rgba(232, 238, 242, 0.502);
+    overflow: hidden;
+}
