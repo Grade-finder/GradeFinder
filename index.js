@@ -110,20 +110,20 @@ function calculateGrade() {
     
 }
 
-//java script for faq accordion
-        // Get all elements with the class 'questions'
-        const accordionButtons = document.querySelectorAll(".questions");
+// //java script for faq accordion
+//         // Get all elements with the class 'questions'
+//         const accordionButtons = document.querySelectorAll(".questions");
 
-        // Add a click event listener to each button
-        accordionButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                // Toggle the next sibling element (the .panel div)
-                const panel = button.nextElementSibling;
+//         // Add a click event listener to each button
+//         accordionButtons.forEach(button => {
+//             button.addEventListener("click", () => {
+//                 // Toggle the next sibling element (the .panel div)
+//                 const panel = button.nextElementSibling;
 
-                if (panel.style.display === "block") {
-                    panel.style.display = "none"; // Hide the panel
-                } else {
-                    panel.style.display = "block"; // Show the panel
-                }
-            });
-        });
+//                 if (panel.style.display === "block") {
+//                     panel.style.display = "none"; // Hide the panel
+//                 } else {
+//                     panel.style.display = "block"; // Show the panel
+//                 }
+//             });
+//         });
