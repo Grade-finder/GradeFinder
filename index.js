@@ -3,6 +3,15 @@ document.getElementById("gradeForm").addEventListener("submit", function (event)
     calculateGrade();
 });
 
+document.getElementById("rst").addEventListener("click",()=>{
+    const inputGroups = document.getElementsByClassName("input-group"); 
+    while (inputGroups.length > 0) {
+        inputGroups[0].parentNode.removeChild(inputGroups[0]); 
+    }
+    document.getElementById('result').textContent = ""; 
+    console.log("All fields and results reset to default."); 
+});
+
 function addField() {
     const inputFields = document.getElementById("inputFields");
     const inputGroups = inputFields.getElementsByClassName("input-group");
