@@ -135,16 +135,15 @@ button:hover {
 
 
 
-/* Styling for the new desired grade input form */
 .desired-grade-container {
-    width: 80%; /* Set width as desired */
-    max-width: 1000px; /* Maximum width of the container */
-    height: auto; /* Auto height for flexibility */
+    width: 80%; 
+    max-width: 1000px;
+    height: auto; 
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
-    margin-top: 0; /* Remove any top margin to ensure proper centering */
+    margin-top: 0; 
 
 
  
