@@ -117,7 +117,7 @@ button:hover {
     font-size: 3em;
     font-weight: 700; /* Bold text */
     letter-spacing: 5px;
-   
+    color: rgb(190, 236, 138);
     margin-bottom: 15px;
 }
 
