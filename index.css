@@ -5,11 +5,13 @@ body {
     color: white; /* White text */
     align-items: center;
     height: 100vh;
+    
+    
 }
 
 /* Calculator */
 .container {
-
+    
     max-width: 400px;
     margin: 90px   ;
     padding: 20px;
@@ -135,12 +137,24 @@ button:hover {
 
 /* Styling for the new desired grade input form */
 .desired-grade-container {
-    background-color: #C8DFCB;
+    width: 80%; /* Set width as desired */
+    max-width: 1000px; /* Maximum width of the container */
+    height: auto; /* Auto height for flexibility */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    margin-top: 30px;
     text-align: center;
+    margin-top: 0; /* Remove any top margin to ensure proper centering */
+
+
+ 
+    margin: 110px   ;
+   
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: #94d0ec;
+    box-shadow: 0 4px 12px rgba(143, 71, 226, 0.15);
+   
 }
 
 .desired-grade-container h2 {
