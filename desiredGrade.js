@@ -1,4 +1,4 @@
-
+  
 document.getElementById("desiredGradeForm").addEventListener("submit", function (event) {
     event.preventDefault();
     calculateRequiredMarks();

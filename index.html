@@ -6,6 +6,7 @@
     <title>Grade Finder</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="calculator.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
@@ -31,32 +32,35 @@
       <h2>
         Easy To Use Calculator With CGPA And Percentage
       </h2>
-      <img class="calculator-png" src="./assets/Calc png.png">
+      <img class="calculator-png" src="./Calc png.png">
       <p class="info-text">Moreover, you can change the default grading scale and set your own. Are you still wondering how to calculate test scores? Scroll down to find out</p>
     </div>  
     
 
 
-
+ 
     <div class="container">
         <form id="gradeForm">
+          
             <div id="inputFields">
                 <div class="input-group">
-                    <label>Subject:</label>
+                    <label id="sub">Subject:</label>
                     <input type="text" id="subject" name="subject" required>
     
-                    <label>Max Marks:</label>
+                    <label id="max">Max Marks:</label>
                     <input id="mm" type="number" name="maxMarks" class="maxMarks" required>
     
-                    <label>Obtained Marks:</label>
+                    <label id="obtained">Obtained Marks:</label>
                     <input id="om" type="number" name="obtainedMarks" class="obtainedMarks" required>
     
-                    <button type="button" id="add-button">Add Another</button>
-                    <button type="button" class="remove-btn" onclick="removeField(this)">Remove</button>
+
                 </div>
+                <button type="button" id="remove-btn" onclick="removeField(this)">Remove</button>
+                <button type="button" id="add-button">Add Another</button>
+                <button type="submit" id="calc-btn">Calculate Grade</button>
             </div>
     
-            <button type="submit">Calculate Grade</button>
+      
              <div id="result"></div>
         </form>
         <div>
@@ -71,7 +75,7 @@
     
     
    
-    
+    <!-- FAQ container -->
     <div class="faq-container">
         <div class="faq-title">Faq</div>
         <div class="faq-section">
@@ -92,6 +96,8 @@
             </ul>
             <p>This gives you both your percentage and CGPA based on your test performance.</p>
           </div>
+
+
           <div class="faq-column">
             <h3>How do I calculate my test grade?</h3>
             <p>a. Determine the total points and points earned.</p>
