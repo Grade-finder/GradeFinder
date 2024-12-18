@@ -1,22 +1,23 @@
 /* Calculator */
 .container {
-    max-width: 520px;
-    max-height: 400px;
-    height: 100%;
-    width: 100%;
-    margin: 90px;
-    padding: 20px;
-    padding-right: 50px;
-    padding-left: 50px;
-    background-color: #C8DFCB;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-  }
+  max-width: 520px;
+  width: 100%;
+  margin: 90px auto; /* Center horizontally and add vertical spacing */
+  padding: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: #C8DFCB;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  height: auto; /* Automatically adjust height */
+  overflow: visible; /* Ensure content isn't clipped */
+}
+
   #gradetitle {
     color: #343a40;
     font-size: 2.5em;
@@ -131,3 +132,5 @@ button:hover {
   font-size: 1.2em;
   color: #495057;
 }
+
+

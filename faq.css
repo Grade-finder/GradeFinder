@@ -63,3 +63,32 @@
     width: 100%;
   }
 }
+
+.faq-section h3 {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #8AC9FE80;
+  border:solid 1px black;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.panel {
+  display: none; /* Hidden by default */
+  padding: 10px;
+  background-color: #8AC9FE80;
+  border: solid 1px black;
+  border-top: none;
+  overflow: hidden;
+}
+
+.faq-column {
+  margin-bottom: 15px;
+}
+
+.panel ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+}
