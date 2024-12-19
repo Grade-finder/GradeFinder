@@ -47,16 +47,34 @@ function saveToLocalStorage() {
 // Load form data from local storage
 window.addEventListener("load", () => {
     const savedData = JSON.parse(localStorage.getItem("gradeFormData"));
-    if (savedData && savedData.length > 0) {
-        for (const { subject, maxMarks, obtainedMarks } of savedData) {
+    if (savedData && Array.isArray(savedData)) {
+        const validData = savedData.filter(data =>
+            data.subject && data.maxMarks && data.obtainedMarks
+        );
+
+        for (const { subject, maxMarks, obtainedMarks } of validData) {
             addField({ subject, maxMarks, obtainedMarks });
         }
+
+        
+        if (validData.length === 0) {
+            addField();
+        }
+
         console.log("Data loaded from local storage");
+    } else {
+        addField();
     }
 });
 
+
 //addField
 function addField(preFilledData = null) {
+    
+    if (preFilledData && (!preFilledData.subject || !preFilledData.maxMarks || !preFilledData.obtainedMarks)) {
+        return;
+    }
+
     const inputFields = document.getElementById("inputFields");
     const inputGroup = document.createElement("div");
     inputGroup.className = "input-group";
@@ -70,6 +88,7 @@ function addField(preFilledData = null) {
     `;
     inputFields.appendChild(inputGroup);
 }
+
 
 // removeField 
 function removeField() {
