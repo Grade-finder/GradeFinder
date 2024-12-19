@@ -1,17 +1,15 @@
 .faq-container {
   background-color: #8AC9FE80;
   border-radius: 80px;
-  padding-left: 22px;
-  padding-right: 22px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding: 14px 22px;
   gap: 36px;
   max-width: 1095px;
   width: 100%;
   background-image: linear-gradient(270deg, #8AC9FE, #85C3BD);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin: 50px auto;
+  position: relative;
+  clear: both;
 }
 
 .faq-title {
@@ -25,7 +23,8 @@
 .faq-section {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Ensure items wrap when space is tight */
+  gap: 20px; /* Add space between columns */
 }
 
 .faq-column {
@@ -33,7 +32,7 @@
   margin-bottom: 20px;
   font-family: "JetBrains Mono", monospace;
   font-size: 15px;
-  line-height: 10px;
+  line-height: 1.6;
   text-align: center;
 }
 
@@ -44,7 +43,6 @@
 
 .faq-column p {
   font-size: 1rem;
-  line-height: 1.6;
   margin-bottom: 15px;
 }
 
@@ -59,7 +57,61 @@
 }
 
 @media (max-width: 768px) {
+  .faq-title {
+    font-size: 36px; /* Adjust title font size for smaller screens */
+  }
+
+  .faq-section {
+    flex-direction: column; /* Stack FAQ columns on small screens */
+    align-items: center; /* Center columns */
+  }
+
   .faq-column {
-    width: 100%;
+    width: 100%; /* Make FAQ columns take up full width */
+    text-align: left; /* Align text left for readability */
+  }
+
+  .faq-column h3 {
+    font-size: 1.1rem; /* Slightly adjust size of section titles */
+  }
+
+  .faq-container {
+    margin-top: 30px; /* Reduced margin for smaller screens */
+    padding: 10px 15px; /* Adjust padding */
   }
 }
+
+.faq-section h3 {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #8AC9FE80;
+  border: solid 1px black;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.panel {
+  display: none;
+  padding: 10px;
+  background-color: #8AC9FE80;
+  border: solid 1px #8AC9FE80;
+  border-top: none;
+  overflow: hidden;
+}
+
+.panel ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+
+.section-above {
+  margin-bottom: 50px; 
+}
+
+.faq-container {
+  margin-top: 30px; 
+}
+
