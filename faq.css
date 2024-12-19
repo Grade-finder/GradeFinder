@@ -1,17 +1,15 @@
-.faq-container {
+.faq-container { 
   background-color: #8AC9FE80;
   border-radius: 80px;
-  padding-left: 22px;
-  padding-right: 22px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding: 14px 22px;
   gap: 36px;
   max-width: 1095px;
   width: 100%;
   background-image: linear-gradient(270deg, #8AC9FE, #85C3BD);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin: 50px auto; /* Dynamic spacing from surrounding elements */
+  position: relative; /* Keeps it in the document flow */
+  clear: both; /* Ensure it clears floated content above */
 }
 
 .faq-title {
@@ -33,7 +31,7 @@
   margin-bottom: 20px;
   font-family: "JetBrains Mono", monospace;
   font-size: 15px;
-  line-height: 10px;
+  line-height: 1.6;
   text-align: center;
 }
 
@@ -44,7 +42,6 @@
 
 .faq-column p {
   font-size: 1rem;
-  line-height: 1.6;
   margin-bottom: 15px;
 }
 
@@ -68,7 +65,7 @@
   cursor: pointer;
   padding: 10px;
   background-color: #8AC9FE80;
-  border:solid 1px black;
+  border: solid 1px black;
   margin: 0;
   font-size: 1.2rem;
 }
@@ -82,13 +79,18 @@
   overflow: hidden;
 }
 
-.faq-column {
-  margin-bottom: 15px;
-}
-
 .panel ul {
   margin: 0;
   padding: 0;
   list-style-type: disc;
   padding-left: 20px;
+}
+
+/* Ensure enough spacing between sections */
+.section-above {
+  margin-bottom: 50px; /* Add space below the previous section */
+}
+
+.faq-container {
+  margin-top: 500px; 
 }
