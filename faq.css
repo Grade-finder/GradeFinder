@@ -65,7 +65,11 @@
   cursor: pointer;
   padding: 10px;
   background-color: #8AC9FE80;
+<<<<<<< HEAD
   border: solid 1px black;
+=======
+  border:solid 1px #8AC9FE80;
+>>>>>>> 6a0c7176d8d200146d12c111c4a13c7ba0b6eeea
   margin: 0;
   font-size: 1.2rem;
 }
@@ -74,7 +78,7 @@
   display: none; /* Hidden by default */
   padding: 10px;
   background-color: #8AC9FE80;
-  border: solid 1px black;
+  border: solid 1px #8AC9FE80;
   border-top: none;
   overflow: hidden;
 }

@@ -58,6 +58,92 @@ input:focus {
   border-color: #007bff;
   outline: none;
 }
+<<<<<<< HEAD
+=======
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: px;
+    align-items: flex-start;
+  }
+  
+  #sub{
+    position: absolute;
+  left: 80px;
+  bottom: 100;
+  }
+  #max{
+    position: absolute;
+  left: 80px;
+  top: 142px
+  }
+  #obtained{
+    position: absolute;
+  left: 80px;
+  top: 194px
+  }
+  input{
+    margin-left: 150px;
+  }
+  label {
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #000000;
+    font-family: "JetBrains Mono", monospace;
+  }
+  
+  input, select {
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    outline: none;
+    max-width: 310px;
+    font-size: 1em;
+    background-color: #D9D9D9;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: #007bff;
+  }
+  
+  button {
+    font-family: 'Roboto Mono', monospace;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 30px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+
+  }
+  
+
+
+#add-button{
+  position: absolute;
+
+  margin-left:180px; 
+}
+#remove-btn{
+  position: absolute;
+float: right;
+  margin-left:360px;
+  background-color: #dc3545;
+ 
+}
+#calc-btn{
+  position: absolute;
+  margin-top:70px;
+  margin-left: 230px;
+>>>>>>> 6a0c7176d8d200146d12c111c4a13c7ba0b6eeea
 
 /* Button Styling */
 button {
