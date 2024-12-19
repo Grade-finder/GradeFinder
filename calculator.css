@@ -71,6 +71,7 @@
     border-radius: 20px;
     margin-bottom: 10px;
     width: 100%;
+    outline: none;
     max-width: 310px;
     font-size: 1em;
     background-color: #D9D9D9;
