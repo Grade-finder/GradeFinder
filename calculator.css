@@ -1,21 +1,21 @@
 /* Calculator */
 .container {
   max-width: 520px;
-  margin: 30px 0; /* Vertical spacing only, no horizontal centering */
+  margin: 30px 0;
   padding: 30px 50px;
   background-color: #C8DFCB;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
-  position: relative; /* Keep it in the document flow */
+  align-items: flex-start;
+  position: relative;
   float: left; 
-  margin-left: 20px; /
+  margin-left: 150px;
+  margin-top: 200px;
 }
 
 
-/* Title Styling */
 #gradetitle {
   color: #343a40;
   font-size: 2em;
@@ -25,17 +25,15 @@
   font-family: "JetBrains Mono", monospace;
 }
 
-/* Input Group Styling */
 .input-group {
   display: grid;
-  grid-template-columns: 150px auto; /* Label + Input */
-  grid-gap: 10px 20px; /* Adjust spacing */
+  grid-template-columns: 150px auto;
+  grid-gap: 10px 20px;
   margin-bottom: 15px;
   width: 100%;
   align-items: center;
 }
 
-/* Input Styling */
 label {
   font-weight: 500;
   font-size: 1em;
@@ -59,7 +57,6 @@ input:focus {
   outline: none;
 }
 
-/* Button Styling */
 button {
   font-family: 'Roboto Mono', monospace;
   padding: 10px 15px;
@@ -77,7 +74,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Remove Button */
 #remove-btn {
   background-color: #dc3545;
   font-size: 0.9em;
@@ -87,7 +83,6 @@ button:hover {
   background-color: #c82333;
 }
 
-/* Action Buttons */
 .action-buttons {
   display: flex;
   justify-content: center;
@@ -115,7 +110,6 @@ button:hover {
   background-color: #f56f5a;
 }
 
-/* Result Section */
 #result {
   margin-top: 20px;
   text-align: center;
@@ -124,7 +118,6 @@ button:hover {
   font-family: "JetBrains Mono", monospace;
 }
 
-/* Add Subject and Delete Buttons */
 .control-buttons {
   display: flex;
   justify-content: center;
