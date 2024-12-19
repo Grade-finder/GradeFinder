@@ -1,4 +1,4 @@
-.faq-container { 
+.faq-container {
   background-color: #8AC9FE80;
   border-radius: 80px;
   padding: 14px 22px;
@@ -7,9 +7,9 @@
   width: 100%;
   background-image: linear-gradient(270deg, #8AC9FE, #85C3BD);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin: 50px auto; /* Dynamic spacing from surrounding elements */
-  position: relative; /* Keeps it in the document flow */
-  clear: both; /* Ensure it clears floated content above */
+  margin: 50px auto;
+  position: relative;
+  clear: both;
 }
 
 .faq-title {
@@ -23,7 +23,8 @@
 .faq-section {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Ensure items wrap when space is tight */
+  gap: 20px; /* Add space between columns */
 }
 
 .faq-column {
@@ -56,8 +57,27 @@
 }
 
 @media (max-width: 768px) {
+  .faq-title {
+    font-size: 36px; /* Adjust title font size for smaller screens */
+  }
+
+  .faq-section {
+    flex-direction: column; /* Stack FAQ columns on small screens */
+    align-items: center; /* Center columns */
+  }
+
   .faq-column {
-    width: 100%;
+    width: 100%; /* Make FAQ columns take up full width */
+    text-align: left; /* Align text left for readability */
+  }
+
+  .faq-column h3 {
+    font-size: 1.1rem; /* Slightly adjust size of section titles */
+  }
+
+  .faq-container {
+    margin-top: 30px; /* Reduced margin for smaller screens */
+    padding: 10px 15px; /* Adjust padding */
   }
 }
 
@@ -65,17 +85,13 @@
   cursor: pointer;
   padding: 10px;
   background-color: #8AC9FE80;
-<<<<<<< HEAD
   border: solid 1px black;
-=======
-  border:solid 1px #8AC9FE80;
->>>>>>> 6a0c7176d8d200146d12c111c4a13c7ba0b6eeea
   margin: 0;
   font-size: 1.2rem;
 }
 
 .panel {
-  display: none; /* Hidden by default */
+  display: none;
   padding: 10px;
   background-color: #8AC9FE80;
   border: solid 1px #8AC9FE80;
@@ -90,11 +106,12 @@
   padding-left: 20px;
 }
 
-/* Ensure enough spacing between sections */
+
 .section-above {
-  margin-bottom: 50px; /* Add space below the previous section */
+  margin-bottom: 50px; 
 }
 
 .faq-container {
-  margin-top: 500px; 
+  margin-top: 30px; 
 }
+
