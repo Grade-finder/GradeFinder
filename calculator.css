@@ -57,8 +57,6 @@ input:focus {
   border-color: #007bff;
   outline: none;
 }
-<<<<<<< HEAD
-=======
   
   .input-group {
     display: flex;
@@ -143,7 +141,6 @@ float: right;
   margin-top:70px;
   margin-left: 230px;
 }
->>>>>>> 75aba8e56efceee5307480fd67458107b1d520df
 
 /* Button Styling */
 button {
