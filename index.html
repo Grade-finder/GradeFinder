@@ -48,13 +48,13 @@
             <div id="inputFields">
                 <div class="input-group">
                     <label id="sub">Subject:</label>
-                    <input type="text" id="subject" name="subject" required>
+                    <input type="text" id="subject" name="subject" minLength="1" maxLength="30" required>
     
                     <label id="max">Max Marks:</label>
-                    <input id="mm" type="number" name="maxMarks" class="maxMarks" required>
+                    <input id="mm" type="number" name="maxMarks" class="maxMarks" min="1" max="999"  required>
     
                     <label id="obtained">Obtained Marks:</label>
-                    <input id="om" type="number" name="obtainedMarks" class="obtainedMarks" required>
+                    <input id="om" type="number" name="obtainedMarks" class="obtainedMarks" min="0" max="999" required>
                 </div>
             </div>
 
