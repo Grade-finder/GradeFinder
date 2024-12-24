@@ -56,14 +56,14 @@ window.addEventListener("load", () => {
             addField({ subject, maxMarks, obtainedMarks });
         }
 
-        
         if (validData.length === 0) {
-            addField();
+            console.log("No valid data found. No fields added.");
+        } else {
+            console.log("Data loaded from local storage");
         }
-
-        console.log("Data loaded from local storage");
     } else {
-        addField();
+        addField(); 
+        console.log("No saved data found. Added one default field.");
     }
 });
 
@@ -74,6 +74,9 @@ function addField(preFilledData = null) {
     if (preFilledData && (!preFilledData.subject || !preFilledData.maxMarks || !preFilledData.obtainedMarks)) {
         return;
     }
+
+    const maxMarks=document.getElementsByClassName('maxMarks');
+    const obtainedMarks=document.getElementsByClassName('obtainedMarks');
 
     const inputFields = document.getElementById("inputFields");
     const inputGroup = document.createElement("div");
@@ -146,3 +149,16 @@ function calculateGrade() {
     const resultContainer = document.getElementById('result');
     alert(resultContainer.textContent = `Your Percentage: ${percentAge}% | Grade: ${grade} | CGPA: ${cgpa}`);
 }
+
+const accordionButtons = document.querySelectorAll(".faq-section h3");
+accordionButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        accordionButtons.forEach(btn => {
+            if (btn !== button) {
+                btn.nextElementSibling.style.display = "none";
+            }
+        });
+        const panel = button.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+});
