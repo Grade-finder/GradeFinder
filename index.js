@@ -113,10 +113,14 @@ function calculateGrade() {
     let grade;
     let percentAge;
     let cgpa;
+    let maxMarksData=[];
+    let obtainedMarksData=[];
+    let subject=[];
 
     const len = document.getElementsByClassName('input-group');
 
     for (let i = 0; i < len.length; i++) {
+        const subjects = len[i].querySelector("input[name='subject']").value || `Subject ${i + 1}`;
         const mm = Number(len[i].getElementsByClassName('maxMarks')[0].value);
         const om = Number(len[i].getElementsByClassName('obtainedMarks')[0].value);
 
@@ -131,6 +135,10 @@ function calculateGrade() {
 
         maxMarks += mm;
         obtainedMarks += om;
+
+        subject.push(subjects);
+        maxMarksData.push(mm);
+        obtainedMarksData.push(om);
     }
 
     percentAge = (obtainedMarks / maxMarks) * 100;
@@ -148,7 +156,43 @@ function calculateGrade() {
 
     const resultContainer = document.getElementById('result');
     alert(resultContainer.textContent = `Your Percentage: ${percentAge}% | Grade: ${grade} | CGPA: ${cgpa}`);
+    generateChart(subject, maxMarksData, obtainedMarksData);
 }
+
+function generateChart(subjects, maxMarksData, obtainedMarksData) {
+    const ctx = document.getElementById('marksChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: subjects,
+            datasets: [
+                {
+                    label: 'Max Marks',
+                    data: maxMarksData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Obtained Marks',
+                    data: obtainedMarksData,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
 
 const accordionButtons = document.querySelectorAll(".faq-section h3");
 accordionButtons.forEach(button => {
