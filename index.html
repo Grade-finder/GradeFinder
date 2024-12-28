@@ -45,18 +45,18 @@
     <div class="container">
         <form id="gradeForm">
           
-            <div id="inputFields">
-                <div class="input-group">
-                    <label id="sub">Subject:</label>
-                    <input type="text" id="subject" name="subject" minLength="1" maxLength="30" required>
-    
-                    <label id="max">Max Marks:</label>
-                    <input id="mm" type="number" name="maxMarks" class="maxMarks" min="1" max="999"  required>
-    
-                    <label id="obtained">Obtained Marks:</label>
-                    <input id="om" type="number" name="obtainedMarks" class="obtainedMarks" min="0" max="999" required>
-                </div>
+          <div id="inputFields">
+            <div class="input-group">
+                <label for="subject" id="sub">Subject:</label>
+                <input type="text" id="subject" name="subject" minLength="1" maxLength="30" required>
+
+                <label for="mm" id="max">Max Marks:</label>
+                <input id="mm" type="number" name="maxMarks" class="maxMarks" min="1" max="999"  required>
+
+                <label for="om"id="obtained">Obtained Marks:</label>
+                <input id="om" type="number" name="obtainedMarks" class="obtainedMarks" min="0" max="999" required>
             </div>
+        </div>
 
             <div id="button-group">
               <button type="button" id="add-button">Add Another</button>
@@ -69,10 +69,11 @@
         </form>
         <div id="circle" class="second"></div>  
       </div>
-      <div>
-        <h2>Marks Comparison</h2>
-        <canvas id="marksChart" width="400" height="200"></canvas>
-      </div>
+
+    <div class="chart-container">
+      <h2>Marks Comparison</h2>
+      <canvas id="marksChart" width="200" height="100"></canvas>
+    </div>
 
     <div>
           <ol id="instructions">Test Grade Calculator – How to Use It?

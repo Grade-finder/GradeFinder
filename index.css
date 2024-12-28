@@ -125,3 +125,14 @@ h2 {
   filter: blur(80px);
   opacity: 0.4;
 }
+
+.chart-container {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  left: 50px;
+  margin-left: 0px;
+}
